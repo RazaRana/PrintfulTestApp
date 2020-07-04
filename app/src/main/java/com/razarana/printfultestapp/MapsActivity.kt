@@ -8,9 +8,10 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener{
 
     private lateinit var mMap: GoogleMap
 
@@ -35,9 +36,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        mMap.setOnMarkerClickListener(this)
+        setUpMap()
+    }
+
+    override fun onMarkerClick(p0: Marker?)= false
+
+    private fun placeMarkerOnMap(location: LatLng) {
+
+        val markerOptions = MarkerOptions().position(location)
+        mMap.addMarker(markerOptions)
+    }
+
+    private fun setUpMap() {
+
+
     }
 }
