@@ -69,6 +69,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
 
 
 
+
         //adding marker to the user object for future reference
         this!!.usersList?.get(index)!!.marker=mMap.addMarker(markerOptions)
 
@@ -85,6 +86,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
             this!!.usersList!![index].marker, newLocation,
             LatLngInterpolator.Spherical()
         )
+
+        if(this!!.usersList!![index].marker!!.isInfoWindowShown)
+            this!!.usersList!![index].marker!!.showInfoWindow()
     }
 
     private fun setUpMap() {
