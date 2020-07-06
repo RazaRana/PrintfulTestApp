@@ -4,5 +4,5 @@ App also update the user location smoothly when the server send updates
 User info could be seen in the info window by clicking on user marker 
 
 
-![Demo](/media/screenshot.jpg)
+![Demo](/media/Screenshot.jpg)
 Format: ![Alt Text](url)
