@@ -1,6 +1,6 @@
 /* Copyright 2013 Google Inc.
    Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0.html */
-package com.razarana.printfultestapp
+package com.razarana.printfultestapp.animations
 
 import com.google.android.gms.maps.model.LatLng
 
@@ -18,7 +18,8 @@ interface LatLngInterpolator {
         }
     }
 
-    class LinearFixed : LatLngInterpolator {
+    class LinearFixed :
+        LatLngInterpolator {
         override fun interpolate(fraction: Float, a: LatLng?, b: LatLng?): LatLng? {
             val lat = (b!!.latitude - a!!.latitude) * fraction + a.latitude
             var lngDelta = b.longitude - a.longitude
@@ -34,7 +35,8 @@ interface LatLngInterpolator {
 
     }
 
-    class Spherical : LatLngInterpolator {
+    class Spherical :
+        LatLngInterpolator {
         /* From github.com/googlemaps/android-maps-utils */
         override fun interpolate(fraction: Float, from: LatLng?, to: LatLng?): LatLng {
             // http://en.wikipedia.org/wiki/Slerp

@@ -1,6 +1,6 @@
 /* Copyright 2013 Google Inc.
    Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0.html */
-package com.razarana.printfultestapp
+package com.razarana.printfultestapp.animations
 
 import android.animation.ObjectAnimator
 import android.animation.TypeEvaluator
@@ -14,9 +14,6 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Interpolator
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
-
-
-
 
 
 object MarkerAnimation {

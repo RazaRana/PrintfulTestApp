@@ -1,4 +1,4 @@
-package com.razarana.printfultestapp
+package com.razarana.printfultestapp.models
 
 import com.google.android.gms.maps.model.Marker
 
