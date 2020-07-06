@@ -5,4 +5,4 @@ User info could be seen in the info window by clicking on user marker
 
 
 ![Demo](/media/Screenshot.jpg)
-Format: ![Alt Text](url)
+
